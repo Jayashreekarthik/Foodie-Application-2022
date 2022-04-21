@@ -1,0 +1,12 @@
+.all{
+    background-image: url(https://wallpaperaccess.com/full/3353905.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height: 100vh;
+    margin: 0px;
+}
+.s{
+   padding-top: 20%;
+    padding-left: 20%;  
+}

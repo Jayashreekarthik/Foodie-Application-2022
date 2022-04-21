@@ -1,0 +1,26 @@
+<div class="img">
+<app-v-navbar></app-v-navbar>
+  <app-search></app-search>
+  <ul>
+      <li *ngFor="let item of items">
+        
+         <a routerLink="/food/{{item.id}}">
+         <img src="{{item.imageUrl}}" alt="food img">
+       
+          <div class="content">
+            <div class="name">
+              {{item.name}}
+            </div>
+            <div class="cook-time">
+               <span>⏰</span>
+               {{item.cookTime}}
+            </div>
+            <div class="price">
+              ₹ {{item.price}}
+            </div>
+            <div type="button" ><button style="background-color: red;padding: 5px 5px;">Delete</button></div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>

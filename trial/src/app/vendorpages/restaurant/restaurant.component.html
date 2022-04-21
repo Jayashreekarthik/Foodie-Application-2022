@@ -1,0 +1,73 @@
+<div class="all">
+<app-navbar></app-navbar>
+<div class="container" style="padding-top: 6%;">
+  <form [formGroup]="formvalue" >
+    <div class="mb-3">
+        <label name="Name" class="form-label" style="color: white;">Restaurant Name</label>
+        <input formControlName=" restaurantName" type="text" class="form-control" for="Name"
+          placeholder="Name" style="width: 30%;">
+      </div>
+      <div *ngIf="f[' restaurantName'].touched && f[' restaurantName'].invalid" class="alert alert-danger">  
+        <div *ngIf="f[' restaurantName']errors['required']">Name is required.</div>  
+        <div *ngIf="f[' restaurantName']errors['pattern']">Please, Enter valid name.</div>  
+      </div>
+
+      <div class="mb-3">
+        <label name="Name" class="form-label" style="color: white;">Restaurant City</label>
+        <input formControlName="  restaurantCity" type="text" class="form-control" for="Name"
+          placeholder="Name" style="width: 30%;">
+      </div>
+      <div *ngIf="f['  restaurantCity'].touched && f['  restaurantCitye'].invalid" class="alert alert-danger">  
+        <div *ngIf="f['  restaurantCity']errors['required']">Name is required.</div>  
+        <div *ngIf="f['  restaurantCity']errors['pattern']">Please, Enter valid name.</div>  
+      </div>
+   
+      <div class="mb-3">
+        <label name="Name" class="form-label" style="color: white;">Restaurant Address</label>
+        <input formControlName="restaurantAddress" type="text" class="form-control" for="Name"
+          placeholder="Name" style="width: 30%;">
+      </div>
+      <div *ngIf="f['restaurantAddress'].touched && f['restaurantAddress'].invalid" class="alert alert-danger">  
+        <div *ngIf="f['restaurantAddress']errors['required']">Name is required.</div>  
+        <div *ngIf="f['restaurantAddress']errors['pattern']">Please, Enter valid name.</div>  
+      </div>
+
+      <div class="mb-3">
+        <label name="Name" class="form-label" style="color: white;">Vendor Name</label>
+        <input formControlName="vendorName" type="text" class="form-control" for="Name"
+          placeholder="Name" style="width: 30%;">
+      </div>
+      <div *ngIf="f['vendorName'].touched && f['vendorName'].invalid" class="alert alert-danger">  
+        <div *ngIf="f['vendorNameme']errors['required']">Name is required.</div>  
+        <div *ngIf="f['vendorName']errors['pattern']">Please, Enter valid name.</div>  
+      </div>
+
+
+      <div class="mb-3">
+        <label for="Email" class="form-label" style="color: white;">Vendor Email</label>
+        <input formControlName="vendorEmail" type="email" class="form-control" pattern="^[a-z0-9._%+-]+@gmail.com"
+          id="exampleInputEmail" placeholder="Email" aria-describedby="emailHelp" style="width: 30%;">
+      </div>
+      <div *ngIf="f['vendorEmail'].touched && f['vendorEmail'].invalid" class="alert alert-danger">  
+        <div *ngIf="f['vendorEmail']errors['required']">enter valid email required.</div>  
+        <div *ngIf="f['vendorEmail']errors['pattern']">example@gmail.com</div>  
+      </div>
+
+        
+      <div class="mb-3">
+        <label for="mobileNumber"  style="color: white;">Vendor Number</label> 
+        <input formControlName="vendorMobile" type="phonenumber" class="form-control"
+        placeholder="number" style="width: 20%;" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+      </div>
+      <div *ngIf="f['vendorMobile'].touched && f['vendorMobile'].invalid" class="alert alert-danger">  
+        <div *ngIf="f['vendorMobile']errors['required']" >Mobile Number is required.</div>  
+        <div *ngIf="f['vendorMobile']errors['pattern']">Please, Enter 10 digit Mobile Number.</div>  
+    </div>  
+     
+    <button style="background-color: green; padding: 5px 5px;" (click)="postRestaurant()">Add</button>
+  
+
+    
+  </form>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="im">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-8">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-9 d-flex align-items-center">
+                <div class="card-body p-8 p-lg-9 text-black">
+
+                  <form  [formGroup]="loginForm" (ngSubmit)=(login(loginForm.value))>
+
+              
+
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;color:white;font-weight: bolder;">LOGIN PAGE</h5>
+                    <div class="mb-3">
+                      <label for="Email" class="form-label" style="color: white;">Email</label>
+                      <input formControlName="email" type="email" class="form-control" pattern="^[a-z0-9._%+-]+@gmail.com"
+                        id="exampleInputEmail" placeholder="Email" aria-describedby="emailHelp" style="width: 60%;">
+                    </div>
+                    <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">  
+                      <div *ngIf="f['email']errors['required']">enter valid email required.</div>  
+                      <div *ngIf="f['email']errors['pattern']">example@gmail.com</div>  
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="Password" class="form-label" style="color: white;">Password</label>
+                      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                      placeholder="Password" style="width: 60%;">
+                    </div>
+                    <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">  
+                      <div *ngIf="f['password']errors['required']">password is required.</div>  
+                      <div *ngIf="f['password']errors['pattern']">Please enter valid password</div>  
+                    </div>  
+
+             
+                                 
+                   <div class="btn">
+                    <button type="submit"  class="btn btn-success btn-lg mb-1">Login</button>
+                  </div>
+                                    
+                    <p class="mb-3 pb-lg-2" style="color: #4d4d52;">Dont have account? <a href="#!" routerLink="" style="color: #393f81;">Register here</a></p>
+                    <a href="#!" class="small text-muted">Terms of use.</a>
+                    <a href="#!" class="small text-muted">Privacy policy</a>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

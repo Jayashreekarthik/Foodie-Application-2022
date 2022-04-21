@@ -1,0 +1,46 @@
+.banner{
+    background-image: url(https://www.guidingtech.com/wp-content/uploads/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-3_4d470f76dc99e18ad75087b1b8410ea9.jpg);
+   background-position: center top;
+   background-size: cover;
+   width: 100vw;
+   height: 100vh;
+   animation: change 10s infinite ease-in-out;
+  }
+  .content h1{
+    color:azure;
+    font-size: 50px;
+    font-weight: bold;
+  
+  }
+  .content{
+    top:30%;
+    left:60%;
+    font-weight: bold;
+    position: absolute;
+  }
+  .content a{
+    text-decoration: none;
+    background-color: black;
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 5px;
+  }
+  .content a:hover{
+    background-color: rgb(40, 172, 57);
+    color: black;
+  }
+  @keyframes change{
+    0%{
+      background-image: url(https://hd-wallpaper.wiki/wp-content/uploads/2021/10/4k-food-wallpaper-scaled.jpg);
+    }
+    20%{
+      background-image: url(https://www.teahub.io/photos/full/331-3315544_wallpaper-delicious-food-meat-potato-oil-meat.jpg);
+    }
+    40%{
+      background-image: url(https://c4.wallpaperflare.com/wallpaper/514/441/220/food-pasta-meal-wallpaper-preview.jpg);
+    }
+    60%{
+      background-image: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/1742ab28b89270e576fe9dda1c70efd26f09a1ec62fdacd963ce58833d501bdd._RI_.jpg);
+    }
+  }
+  

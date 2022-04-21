@@ -1,0 +1,19 @@
+a:hover{
+    
+    font-weight: bold;
+    font-size: 15px;
+}
+.n{
+    position: sticky;
+    top: 0%;
+    padding-left: 3%;
+    background: rgba(0,0,0,0.6);
+
+}
+nav{
+    display: flex;
+    column-gap: 70%;
+}
+#navbarNav2 ul{
+    column-gap: 25%;
+}

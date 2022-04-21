@@ -1,0 +1,65 @@
+<div class="bg">
+    <div class="container py-4 h-100">
+        <div class="row d-flex justify-content-center align-items-right h-100">
+            <div class="col-lg-10 col-xl-6">
+                <div class="card rounded-3">
+                 
+                    <div class="card-body p-12 p-md-12">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2" style="color: white;">REGISTER HERE</h3>
+
+                        <form [formGroup]="signupForm" (ngSubmit)=(signUp(signupForm.value))>
+                            <div class="mb-3">
+                                <label name="Name" class="form-label" style="color: white;">Name</label>
+                                <input formControlName="name" type="text" class="form-control" for="Name"
+                                  placeholder="Name" style="width: 60%;">
+                              </div>
+                              <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">  
+                                <div *ngIf="f['name']errors['required']">Name is required.</div>  
+                                <div *ngIf="f['name']errors['pattern']">Please, Enter valid name.</div>  
+                              </div>
+                        
+                              <div class="mb-3">
+                                <label for="Email" class="form-label" style="color: white;">Email</label>
+                                <input formControlName="email" type="email" class="form-control" pattern="^[a-z0-9._%+-]+@gmail.com"
+                                  id="exampleInputEmail" placeholder="Email" aria-describedby="emailHelp" style="width: 60%;">
+                              </div>
+                              <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">  
+                                <div *ngIf="f['email']errors['required']">enter valid email required.</div>  
+                                <div *ngIf="f['email']errors['pattern']">example@gmail.com</div>  
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="Password" class="form-label" style="color: white;">Password</label>
+                                <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" style="width: 60%;">
+                              </div>
+                              <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">  
+                                <div *ngIf="f['password']errors['required']">password is required.</div>  
+                                <div *ngIf="f['password']errors['pattern']">Please enter valid password</div>  
+                              </div>  
+                              
+                              <div class="mb-3">
+                                <label for="mobileNumber"  style="color: white;">Mobile Number</label> 
+                                <input formControlName="mobile" type="phonenumber" class="form-control"
+                                placeholder="number" style="width: 40%;" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+                              </div>
+                              <div *ngIf="f['mobile'].touched && f['mobile'].invalid" class="alert alert-danger">  
+                                <div *ngIf="f['mobile']errors['required']" >Mobile Number is required.</div>  
+                                <div *ngIf="f['mobile']errors['pattern']">Please, Enter 10 digit Mobile Number.</div>  
+                            </div>  
+                             
+                              <hr>
+                              <button class="btn btn-primary" type="submit" >Submit</button>  
+                              <hr>
+                              <p class="mb-3 pb-lg-2" style="color: #4d4d52;">Already have account? <a href="" routerLink="login" style="color: #393f81;">Login here</a></p>
+                              <a href="#!" class="small text-muted">Terms of use.</a>
+                              <a href="#!" class="small text-muted">Privacy policy</a>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

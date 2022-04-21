@@ -1,0 +1,23 @@
+button{
+    padding:5px 5px;
+    background-color: red;
+  }
+  .card{
+    width:250px;
+  }
+  .whole{
+    display:flex;
+    column-gap: 120px;
+    margin-top: 5%;
+  }
+  .txt{
+    margin-left: 10%;
+  }
+.img{
+  background-image: url(https://nextbridge.com/wp-content/uploads/2020/08/5-creative-contact-us-page-examples-for-you.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+  
